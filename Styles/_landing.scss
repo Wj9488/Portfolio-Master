@@ -1,0 +1,10 @@
+@import "./vars";
+
+.scalableComponent{
+    display: block;
+    @include textWrapperComponent(black, 5%, left);
+    height: 100vh;
+    .scalableHeader{
+        @include headerComponent(white, $desktop_header_fontSize);
+    }
+}

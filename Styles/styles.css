@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&family=Montserrat:wght@500;900&display=swap");
+#workComp {
+  display: none;
+  background-color: black;
+  padding: 3%;
+  text-align: left;
+  height: 100vh;
+}
+#workComp .scalableHeader {
+  color: white;
+  font-size: 6vw;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+#workComp .scalableDescriptor {
+  color: white;
+  font-size: 4vw;
+}
+
+#aboutComp {
+  display: none;
+  background-color: black;
+  padding: 3%;
+  text-align: left;
+  height: 100vh;
+}
+#aboutComp .scalableHeader {
+  color: white;
+  font-size: 6vw;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+#aboutComp .scalableDescriptor {
+  color: white;
+  font-size: 4vw;
+}
+
+#contactComp {
+  display: none;
+  background-color: black;
+  padding: 3%;
+  text-align: left;
+  height: 100vh;
+}
+#contactComp .scalableHeader {
+  color: white;
+  font-size: 6vw;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+#contactComp .scalableDescriptor {
+  color: white;
+  font-size: 4vw;
+}
+
+#resumeComp {
+  display: none;
+  background-color: black;
+  padding: 3%;
+  text-align: left;
+  height: 100vh;
+}
+#resumeComp .scalableHeader {
+  color: white;
+  font-size: 6vw;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+#resumeComp .scalableDescriptor {
+  color: white;
+  font-size: 4vw;
+}
+
+.scalableComponent {
+  display: block;
+  background-color: black;
+  padding: 5%;
+  text-align: left;
+  height: 100vh;
+}
+.scalableComponent .scalableHeader {
+  color: white;
+  font-size: 8vw;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: "Montserrat";
+  overflow: hidden;
+}
+
+.app__layout_grid {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.app__layout_grid .large__section {
+  width: 80%;
+}
+.app__layout_grid .small__section {
+  font-family: "Kanit";
+  width: 20%;
+}
+.app__layout_grid .small__section .app__layout_navigation {
+  background-color: white;
+  padding: 0%;
+  text-align: left;
+  margin: 5%;
+}
+.app__layout_grid .small__section .app__layout_navigation .app__nav_item {
+  color: #3a3a3a;
+  font-size: 4vw;
+  font-weight: 900;
+  transition: all 0.2s ease-in-out;
+  padding: 2%;
+}
+.app__layout_grid .small__section .app__layout_navigation .app__nav_item:hover {
+  cursor: pointer;
+  color: black;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    overflow: hidden;
+  }
+  .app__layout_grid .small__section .app__layout_navigation .app__nav_item {
+    margin-top: 50%;
+  }
+}/*# sourceMappingURL=styles.css.map */

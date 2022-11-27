@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="x-icon" href="/assets/WJLogo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Will Jones, portfolio, W/J, work, resume, about, contact">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/WJLogo.png">
+    <meta property="og:description" content="I'm Will, a front end web developer. This is my website!">
+    <meta property="og:url" content="">
+    <link rel="stylesheet" href="./Styles/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="./Javascript/animations.js" defer></script>
+    <script src="./Javascript/main.js" defer></script>
+    <title>Will Jones</title>
+</head>
+<body>
+    
+    <!-- APP wrapper grid -->
+<div class="app__layout_grid">
+    <div class="large__section">
+        <div class="scalableComponent" id="landingComp"> 
+            <h1 class="scalableHeader" id="landHeader">Hi, I'm Will and I'm a 
+                <span class="txt-type" data-wait="1600" data-words='["trader.", "website developer.", "university student."]'>
+                </span></h1>
+        </div>
+        <div class="scalableComponent" id="workComp"> 
+            <h1 class="scalableHeader" id="wHeader">
+                Projects I've worked on.
+            </h1>
+            <p class="scalableDescriptor" id="wDescriptor1">
+                Exam Tracker
+            </p>
+            <p class="scalableDescriptor" id="wDescriptor2">
+                Hatred Clothing
+            </p>
+        </div>
+        <div class="scalableComponent" id="aboutComp"> 
+            <h1 class="scalableHeader" id="aHeader">
+                About me<span id="dotOne">.</span><span id="dotTwo">.</span><span id="dotThree">.</span>
+            </h1>
+            <p class="scalableDescriptor" id="aDescriptor">
+                I’m a website developer working on becoming
+                a full stack developer before graduating in 2024. 
+                I'm currently studying business management at 
+                Exeter University.
+            </p>
+        </div>
+        <div class="scalableComponent" id="contactComp"> 
+            <h1 class="scalableHeader" id="cHeader">Contact me.</h1>
+            <p class="scalableDescriptor" id="cDescriptor">wtjones10@gmail.com</p>
+        </div>
+        <div class="scalableComponent" id="resumeComp"> 
+            <h1 class="scalableHeader" id="rHeader">My resume.</h1>
+            <p class="scalableDescriptor" id="rDescriptor">Download here</p>
+        </div>
+    </div>
+    <div class="small__section">
+        <div class="app__layout_navigation">
+                <p class="app__nav_item" id="nHome">HOME</p>
+                <p class="app__nav_item" id="nWork">WORK</p>
+                <p class="app__nav_item" id="nAbout">ABOUT</p>
+                <p class="app__nav_item" id="nContact">CONTACT</p>
+                <p class="app__nav_item" id="nResume">RESUME </p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

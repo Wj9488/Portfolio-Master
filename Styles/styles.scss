@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&family=Montserrat:wght@500;900&display=swap');
+
+@import "./vars";
+@import "./work";
+@import "./about";
+@import "./contact";
+@import "./resume";
+@import "./landing";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// The body will have to be a grid layout
+// The only thing that should refresh is the first part of the grid
+
+body{
+    background-color: white;
+    font-family: "Montserrat";
+    overflow: hidden;
+}
+
+.app__layout_grid{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    .large__section{
+        width: 80%;
+    }
+    .small__section {
+        font-family: "Kanit";
+        width: 20%;
+        .app__layout_navigation {
+            @include textWrapperComponent(white, 0%, left);
+            margin: 5%;
+            .app__nav_item {
+                @include descriptorComponent(#3a3a3a);
+                font-weight: 900;
+                transition: all 0.2s ease-in-out;
+                padding: 2%;
+                &:hover{
+                    cursor: pointer;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body{
+        overflow: hidden;
+    }
+    .app__layout_grid{
+        .small__section {
+            .app__layout_navigation {
+                .app__nav_item {
+                    margin-top: 50%;
+                }
+            }
+        }
+    }
+}

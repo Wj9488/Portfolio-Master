@@ -1,0 +1,13 @@
+@import "./vars"; 
+
+#aboutComp{
+    display: none;
+    @include textWrapperComponent($aboutTextColor, 3%, left);
+    height: 100vh;
+    .scalableHeader{
+        @include headerComponent(white, $desktop_section_header_fontSize);
+    }
+    .scalableDescriptor{
+        @include descriptorComponent(white);
+    }
+}
