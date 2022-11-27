@@ -14,9 +14,9 @@ $desktop_header_fontSize: 8vw;
 $desktop_section_header_fontSize: 6vw;
 $desktop_descriptor_fontSize: 4vw;
 
-$mobile_header_fontSize: 60px;
-$mobile_section_header_fontSize: 40px;
-$mobile_descriptor_fontSize: 20px;
+$mobile_header_fontSize: 12vw;
+$mobile_section_header_fontSize: 10vw;
+$mobile_descriptor_fontSize: 6vw;
 
 // GLOBAL MIXINS
 
@@ -41,7 +41,7 @@ $mobile_descriptor_fontSize: 20px;
     margin-top: 2%;
 }
 
-@mixin descriptorComponent($Dcolor) {
+@mixin descriptorComponent($Dcolor, $dFontSize) {
     color: $Dcolor;
-    font-size: $desktop_descriptor_fontSize;
+    font-size: $dFontSize;
 }

@@ -8,3 +8,11 @@
         @include headerComponent(white, $desktop_header_fontSize);
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .scalableComponent{
+        .scalableHeader{
+            @include headerComponent(white, $mobile_header_fontSize);
+        }
+    }
+}

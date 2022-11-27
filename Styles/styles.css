@@ -17,6 +17,26 @@
   font-size: 4vw;
 }
 
+@media screen and (max-width: 1000px) {
+  #workComp {
+    display: none;
+    background-color: black;
+    padding: 5%;
+    text-align: left;
+    height: 100vh;
+  }
+  #workComp .scalableHeader {
+    color: white;
+    font-size: 10vw;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    padding-bottom: 10%;
+  }
+  #workComp .scalableDescriptor {
+    color: white;
+    font-size: 6vw;
+  }
+}
 #aboutComp {
   display: none;
   background-color: black;
@@ -35,6 +55,26 @@
   font-size: 4vw;
 }
 
+@media screen and (max-width: 1000px) {
+  #aboutComp {
+    display: none;
+    background-color: black;
+    padding: 5%;
+    text-align: left;
+    height: 100vh;
+  }
+  #aboutComp .scalableHeader {
+    color: white;
+    font-size: 10vw;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    padding-bottom: 10%;
+  }
+  #aboutComp .scalableDescriptor {
+    color: white;
+    font-size: 6vw;
+  }
+}
 #contactComp {
   display: none;
   background-color: black;
@@ -53,6 +93,26 @@
   font-size: 4vw;
 }
 
+@media screen and (max-width: 1000px) {
+  #contactComp {
+    display: none;
+    background-color: black;
+    padding: 5%;
+    text-align: left;
+    height: 100vh;
+  }
+  #contactComp .scalableHeader {
+    color: white;
+    font-size: 10vw;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    padding-bottom: 10%;
+  }
+  #contactComp .scalableDescriptor {
+    color: white;
+    font-size: 6vw;
+  }
+}
 #resumeComp {
   display: none;
   background-color: black;
@@ -71,6 +131,26 @@
   font-size: 4vw;
 }
 
+@media screen and (max-width: 1000px) {
+  #resumeComp {
+    display: none;
+    background-color: black;
+    padding: 5%;
+    text-align: left;
+    height: 100vh;
+  }
+  #resumeComp .scalableHeader {
+    color: white;
+    font-size: 10vw;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    padding-bottom: 10%;
+  }
+  #resumeComp .scalableDescriptor {
+    color: white;
+    font-size: 6vw;
+  }
+}
 .scalableComponent {
   display: block;
   background-color: black;
@@ -85,6 +165,14 @@
   margin-top: 2%;
 }
 
+@media screen and (max-width: 1000px) {
+  .scalableComponent .scalableHeader {
+    color: white;
+    font-size: 12vw;
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+}
 * {
   padding: 0;
   margin: 0;

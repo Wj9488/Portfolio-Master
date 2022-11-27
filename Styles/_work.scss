@@ -8,6 +8,21 @@
         @include headerComponent(white, $desktop_section_header_fontSize);
     }
     .scalableDescriptor{
-        @include descriptorComponent(white);
+        @include descriptorComponent(white, $desktop_descriptor_fontSize);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #workComp{
+        display: none;
+        @include textWrapperComponent($workTextColor, 5%, left);
+        height: 100vh;
+        .scalableHeader{
+            @include headerComponent(white, $mobile_section_header_fontSize);
+            padding-bottom: 10%;
+        }
+        .scalableDescriptor{
+            @include descriptorComponent(white, $mobile_descriptor_fontSize);
+        }
     }
 }
