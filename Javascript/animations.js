@@ -21,10 +21,6 @@ const workComp = document.getElementById("workComp");
 const aboutComp = document.getElementById("aboutComp");
 const contactComp = document.getElementById("contactComp");
 const resumeComp = document.getElementById("resumeComp");
-
-// const navBackground = document.querySelector(".small__section");
-// const navLinksBackground = document.querySelector(".app__layout_navigation");
-
 //navigation 
 const home = document.getElementById("nHome");
 const work = document.getElementById("nWork");
@@ -172,10 +168,6 @@ work.addEventListener("click", () => {
     work.style.marginTop = "50%";
 })
 about.addEventListener("click", () => {
-    // gsap.from("#aboutComp", {
-    //     duration: 1,
-    //     opacity: 0,
-    // })
     gsap.from("#aHeader", {
         duration: 1,
         opacity: 0,
@@ -218,10 +210,6 @@ about.addEventListener("click", () => {
     about.style.marginTop = "50%";
 })
 contact.addEventListener("click", () => {
-    // gsap.from("#aboutComp", {
-    //     duration: 1,
-    //     opacity: 0,
-    // })
     gsap.from("#cHeader", {
         duration: 1,
         opacity: 0,
@@ -248,10 +236,6 @@ contact.addEventListener("click", () => {
     contact.style.marginTop = "50%";
 })
 resume.addEventListener("click", () => {
-    // gsap.from("#aboutComp", {
-    //     duration: 1,
-    //     opacity: 0,
-    // })
     gsap.from("#rHeader", {
         duration: 1,
         opacity: 0,
