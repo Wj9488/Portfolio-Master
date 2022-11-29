@@ -28,17 +28,13 @@ const about = document.getElementById("nAbout");
 const contact = document.getElementById("nContact");
 const resume = document.getElementById("nResume")
 
+const navItems = document.querySelectorAll(".app__nav_item"); 
+
 window.addEventListener("resize", () => {
     if(window.innerWidth > 1000) {
-        work.style.marginTop = "0%";
-        about.style.marginTop = "0%";
-        contact.style.marginTop = "0%";
-        resume.style.marginTop = "0%";
+        navItems.forEach(item => item.style.marginTop = "0%");
     } else {
-        work.style.marginTop = "50%";
-        about.style.marginTop = "50%";
-        contact.style.marginTop = "50%";
-        resume.style.marginTop = "50%";
+        navItems.forEach(item => item.style.marginTop = "50%");
     }
 })
 
