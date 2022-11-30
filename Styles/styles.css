@@ -265,6 +265,7 @@ body {
     cursor: pointer;
   }
   .app__layout_grid .large__section {
+    overflow: hidden;
     width: 100%;
   }
   .app__layout_grid .small__section {

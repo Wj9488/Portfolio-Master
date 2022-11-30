@@ -99,6 +99,7 @@ body{
     }
     .app__layout_grid{
         .large__section {
+            overflow: hidden;
             width: 100%;
         }
         .small__section {
