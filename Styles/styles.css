@@ -185,6 +185,16 @@ body {
   overflow: hidden;
 }
 
+.menu__container {
+  display: none;
+}
+.menu__container .menu__toggle {
+  display: none;
+}
+.menu__container .menu__close {
+  display: none;
+}
+
 .app__layout_grid {
   display: flex;
   flex-direction: row;
@@ -203,6 +213,17 @@ body {
   text-align: left;
   margin: 5%;
 }
+.app__layout_grid .small__section .app__layout_navigation .app__nav_home {
+  color: #3a3a3a;
+  font-size: 4vw;
+  font-weight: 900;
+  transition: all 0.2s ease-in-out;
+  padding: 2%;
+}
+.app__layout_grid .small__section .app__layout_navigation .app__nav_home:hover {
+  cursor: pointer;
+  color: black;
+}
 .app__layout_grid .small__section .app__layout_navigation .app__nav_item {
   color: #3a3a3a;
   font-size: 4vw;
@@ -218,6 +239,40 @@ body {
 @media screen and (max-width: 1000px) {
   body {
     overflow: hidden;
+  }
+  .menu__container {
+    display: block;
+    background-color: black;
+  }
+  .menu__container .menu__toggle {
+    display: block;
+    color: white;
+    font-size: 10vw;
+    padding-top: 2%;
+    padding-right: 40%;
+  }
+  .menu__container .menu__toggle:hover {
+    cursor: pointer;
+  }
+  .menu__container .menu__close {
+    display: none;
+    color: white;
+    font-size: 10vw;
+    padding-top: 2%;
+    padding-right: 40%;
+  }
+  .menu__container .menu__close:hover {
+    cursor: pointer;
+  }
+  .app__layout_grid .large__section {
+    width: 100%;
+  }
+  .app__layout_grid .small__section {
+    width: 0%;
+    display: none;
+  }
+  .app__layout_grid .small__section .app__layout_navigation .app__nav_home {
+    margin-top: 50%;
   }
   .app__layout_grid .small__section .app__layout_navigation .app__nav_item {
     margin-top: 50%;

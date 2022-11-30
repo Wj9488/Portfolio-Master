@@ -22,6 +22,16 @@ body{
     overflow: hidden;
 }
 
+.menu__container {
+    display: none; 
+    .menu__toggle {
+        display: none;
+    }
+    .menu__close {
+        display: none;
+    }
+}
+
 .app__layout_grid{
     display: flex;
     flex-direction: row;
@@ -35,8 +45,18 @@ body{
         .app__layout_navigation {
             @include textWrapperComponent(white, 0%, left);
             margin: 5%;
+            .app__nav_home {
+                @include descriptorComponent($normalTextColor, $desktop_descriptor_fontSize);
+                font-weight: 900;
+                transition: all 0.2s ease-in-out;
+                padding: 2%;
+                &:hover{
+                    cursor: pointer;
+                    color: black;
+                }
+            }
             .app__nav_item {
-                @include descriptorComponent(#3a3a3a, $desktop_descriptor_fontSize);
+                @include descriptorComponent($normalTextColor, $desktop_descriptor_fontSize);
                 font-weight: 900;
                 transition: all 0.2s ease-in-out;
                 padding: 2%;
@@ -53,9 +73,41 @@ body{
     body{
         overflow: hidden;
     }
+    .menu__container {
+        display: block; 
+        background-color: black;
+        .menu__toggle {
+            display: block;
+            color: white;
+            font-size: 10vw;
+            padding-top: 2%;
+            padding-right: 40%;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .menu__close {
+            display: none;
+            color: white;
+            font-size: 10vw;
+            padding-top: 2%;
+            padding-right: 40%;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
     .app__layout_grid{
+        .large__section {
+            width: 100%;
+        }
         .small__section {
+            width: 0%;
+            display: none;
             .app__layout_navigation {
+                .app__nav_home {
+                    margin-top: 50%;
+                }
                 .app__nav_item {
                     margin-top: 50%;
                 }

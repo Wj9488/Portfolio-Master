@@ -21,6 +21,8 @@ const workComp = document.getElementById("workComp");
 const aboutComp = document.getElementById("aboutComp");
 const contactComp = document.getElementById("contactComp");
 const resumeComp = document.getElementById("resumeComp");
+
+const scalableComponents = document.querySelectorAll(".scalableComponent")
 //navigation 
 const home = document.getElementById("nHome");
 const work = document.getElementById("nWork");
@@ -31,10 +33,16 @@ const resume = document.getElementById("nResume")
 const navItems = document.querySelectorAll(".app__nav_item"); 
 
 window.addEventListener("resize", () => {
-    if(window.innerWidth > 1000) {
+    if(window.innerWidth > 830) {
         navItems.forEach(item => item.style.marginTop = "0%");
+        largeSection.style.width = "80%";
+        smallSection.style.width = "20%";
+        smallSection.style.display = "block";
     } else {
-        navItems.forEach(item => item.style.marginTop = "50%");
+        navItems.forEach(item => item.style.marginTop = "50%"); 
+        largeSection.style.width = "100%";
+        smallSection.style.width = "0%";
+        smallSection.style.display = "none";
     }
 })
 
@@ -44,88 +52,34 @@ home.addEventListener("click", () => {
         opacity: 0,
         x: 20,
     })
-    if(window.innerWidth < 1000) {
+    if(window.innerWidth < 830) {
         console.log("Mobile device detected")
-        workComp.style.display = "none";
-        aboutComp.style.display = "none";
-        contactComp.style.display = "none";
-        resumeComp.style.display = "none";
-        work.style.color = "#3a3a3a";
-        about.style.color = "#3a3a3a";
-        contact.style.color = "#3a3a3a";
-        resume.style.color = "#3a3a3a";
-        about.style.display = "block";
-        work.style.display = "block";
-        contact.style.display = "block";
-        resume.style.display = "block";
-        
+        scalableComponents.forEach(comp => comp.style.display = "none")
+        scalableComponents.forEach(comp => comp.style.color = "#3a3a3a")
+
+        navItems.forEach(item => item.style.display = "block")
+        navItems.forEach(comp => comp.style.fontWeight = "900")
+        navItems.forEach(comp => comp.style.letterSpacing = "0px")
+        navItems.forEach(comp => comp.style.fontSize = "4vw")
+        navItems.forEach(comp => comp.style.transform = "rotate(0deg)")
+        navItems.forEach(comp => comp.style.marginTop = "50%")
+
         home.textContent = "HOME"; 
         landingComp.style.display = "block";
-    
-        work.style.fontWeight = "900";
-        work.style.letterSpacing = "0px";
-        work.style.fontSize = "4vw";
-        work.style.transform = "rotate(0deg)";
-        work.style.marginTop = "50%";
-    
-        about.style.fontWeight = "900";
-        about.style.letterSpacing = "0px";
-        about.style.fontSize = "4vw";
-        about.style.transform = "rotate(0deg)";
-        about.style.marginTop = "50%";
-    
-        contact.style.fontWeight = "900";
-        contact.style.letterSpacing = "0px";
-        contact.style.fontSize = "4vw";
-        contact.style.transform = "rotate(0deg)";
-        contact.style.marginTop = "50%";
-    
-        resume.style.fontWeight = "900";
-        resume.style.letterSpacing = "0px";
-        resume.style.fontSize = "4vw";
-        resume.style.transform = "rotate(0deg)";
-        resume.style.marginTop = "50%";
     } else {
         console.log("Desktop/Tablet detected")
-        workComp.style.display = "none";
-        aboutComp.style.display = "none";
-        contactComp.style.display = "none";
-        resumeComp.style.display = "none";
-        work.style.color = "#3a3a3a";
-        about.style.color = "#3a3a3a";
-        contact.style.color = "#3a3a3a";
-        resume.style.color = "#3a3a3a";
-        about.style.display = "block";
-        work.style.display = "block";
-        contact.style.display = "block";
-        resume.style.display = "block";
+        scalableComponents.forEach(comp => comp.style.display = "none")
+        scalableComponents.forEach(comp => comp.style.color = "#3a3a3a")
+        navItems.forEach(item => item.style.display = "block")
+
+        navItems.forEach(comp => comp.style.fontWeight = "900")
+        navItems.forEach(comp => comp.style.letterSpacing = "0px")
+        navItems.forEach(comp => comp.style.fontSize = "4vw")
+        navItems.forEach(comp => comp.style.transform = "rotate(0deg)")
+        navItems.forEach(comp => comp.style.marginTop = "0")
         
         home.textContent = "HOME"; 
         landingComp.style.display = "block";
-    
-        work.style.fontWeight = "900";
-        work.style.letterSpacing = "0px";
-        work.style.fontSize = "4vw";
-        work.style.transform = "rotate(0deg)";
-        work.style.marginTop = "0";
-    
-        about.style.fontWeight = "900";
-        about.style.letterSpacing = "0px";
-        about.style.fontSize = "4vw";
-        about.style.transform = "rotate(0deg)";
-        about.style.marginTop = "0";
-    
-        contact.style.fontWeight = "900";
-        contact.style.letterSpacing = "0px";
-        contact.style.fontSize = "4vw";
-        contact.style.transform = "rotate(0deg)";
-        contact.style.marginTop = "0";
-    
-        resume.style.fontWeight = "900";
-        resume.style.letterSpacing = "0px";
-        resume.style.fontSize = "4vw";
-        resume.style.transform = "rotate(0deg)";
-        resume.style.marginTop = "0";
     }
 
 })
@@ -257,6 +211,30 @@ resume.addEventListener("click", () => {
     resume.style.transform = "rotate(90deg)";
     resume.style.marginTop = "50%";
 })
+
+const menuToggle = document.querySelector(".menu__toggle"); 
+    const menuClose = document.querySelector(".menu__close");
+    const largeSection = document.querySelector(".large__section");
+    const smallSection = document.querySelector(".small__section");
+
+    menuToggle.addEventListener("click", () => {
+        menuToggle.style.display = "none";
+        menuClose.style.display = "block";
+
+        largeSection.style.width = "80%";
+        smallSection.style.width = "20%";
+        smallSection.style.display = "block";
+    })
+    menuClose.addEventListener("click", () => {
+        menuToggle.style.display = "block";
+        menuClose.style.display = "none";
+
+        largeSection.style.width = "100%";
+        smallSection.style.width = "0%";
+        smallSection.style.display = "none";
+    })
 }
 transitions()
+
+    
 
