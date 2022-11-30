@@ -254,14 +254,14 @@ body {
   .menu__container .menu__toggle:hover {
     cursor: pointer;
   }
-  .menu__container .menu__close {
+  .menu__close {
     display: none;
-    color: white;
+    color: #3a3a3a;
     font-size: 10vw;
     padding-top: 2%;
     padding-right: 40%;
   }
-  .menu__container .menu__close:hover {
+  .menu__close:hover {
     cursor: pointer;
   }
   .app__layout_grid .large__section {

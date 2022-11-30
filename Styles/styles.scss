@@ -85,16 +85,16 @@ body{
             &:hover {
                 cursor: pointer;
             }
-        }
-        .menu__close {
-            display: none;
-            color: white;
-            font-size: 10vw;
-            padding-top: 2%;
-            padding-right: 40%;
-            &:hover{
-                cursor: pointer;
-            }
+        } 
+    }
+    .menu__close {
+        display: none;
+        color: $normalTextColor;
+        font-size: 10vw;
+        padding-top: 2%;
+        padding-right: 40%;
+        &:hover{
+            cursor: pointer;
         }
     }
     .app__layout_grid{
